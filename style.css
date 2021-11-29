@@ -1,0 +1,88 @@
+
+/* 1 задание*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#random {
+    text-align: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: 50px;
+    padding: 3%;
+    background-color: aquamarine;
+}
+
+#number {
+    height: 60px;
+    margin: 15px;
+    font-size: xxX-large;
+}
+
+#buttonRandom {
+    display: block;
+    cursor: pointer;
+    margin: 30px -10px 10px; 
+}
+
+
+/* 2 задание(светофор)*/
+
+.div {
+    display: inline-flex;
+    background: rgb(170, 154, 110);
+    width: 230px;
+    padding: 15px;
+    margin: 20px;
+} 
+
+.light {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 40px;
+    margin: 5px;
+    transition: .5s;
+    background: #574646;
+}
+
+.light.red.on {
+    background: #ff0000;
+}
+
+.light.yellow.on {
+    background: #ffff00;
+}
+
+.light.green.on {
+    background: #008000;
+}
+
+button {
+    margin: 5px 0px 0px 10px;
+    width: 60px;
+    cursor: pointer;
+} 
+
+
+/* 3-4 задание */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.list span {
+    cursor: pointer;
+}
+
+li.selected {
+    background-color: gray;
+    color: pink;
+}
+
+li.hide {
+    display: none;
+}
+
