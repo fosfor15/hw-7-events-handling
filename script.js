@@ -2,8 +2,11 @@
 const buttonRandom = document.getElementById('buttonRandom');
 const div = document.getElementById('number');
 
+// Простые функции традиционно именуются с маленькой буквы. Также в именах функции по-хорошему должен присутствовать глагол.
 function Random() {
     const max = 100;
+    // Нет необходимости держать постоянное значение в отдельной константе – его можно использовать прямо в функции ниже
+
     return Math.round(Math.random() * max);
 }
 
@@ -32,11 +35,14 @@ function start() {
 
 //3 задание 
 //сворачивание списка
+
 for (let li of list.querySelectorAll("li")) {
     let span = document.createElement("span"); //создает пространство для клика
     span.classList.add("show");
     li.prepend(span);
     span.append(span.nextSibling);
+
+    // А почему вы не захотели провести эту работу в HTML?
 }
 
 list.onclick = function (event) {
@@ -63,6 +69,8 @@ const parentLi = list.getElementsByClassName('parent');
 
 for(var i = 0; i < parentLi.length; i++) {
     light(parentLi[i].firstChild)
+
+    // Таким образом у вас получилось множество слушателей событий mouseover и mouseout, однако здесь подошло бы делегирование событий к родительскому элементу списка ul
 }
 
 function light(parentLi) {
@@ -169,5 +177,6 @@ document.addEventListener( 'keyup', event => {
 });//todo
 
 
+// Слишком сложная реализация. Необходимо было создать функции на сворачивание/разворачивание и на подсветку при наведении курсора мыши и прязать эти функции как обработчики событий. Данные функции должны были бы принмать элемент, над которым необходимо было бы совершить действие. Разница заключается только в способе определения элемента при каждом событии.
 
 
